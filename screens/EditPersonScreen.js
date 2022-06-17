@@ -99,7 +99,8 @@ export default function EditPersonScreen(props) {
   }
 
   function showViewPerson() {
-    props.navigation.navigate("ViewPerson",{id: id})
+    //props.navigation.replace("ViewPerson",{id: id})
+    props.navigation.pop()
   }
 
   //Edit person
@@ -128,7 +129,7 @@ export default function EditPersonScreen(props) {
       <ScrollView style={Styles.container} contentContainerStyle={Styles.contentContainer}>
 
           
-        <TextH1 style={{marginTop:0}}>Edit: {nameOriginal}</TextH1>
+        <TextH1 style={{marginTop:0}}>{nameOriginal}</TextH1>
         
         <View style={Styles.form}>
 

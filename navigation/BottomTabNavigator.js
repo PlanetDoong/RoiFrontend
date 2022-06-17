@@ -5,6 +5,7 @@ import * as React from 'react';
 import TabBarIcon from '../components/TabBarIcon';
 import Colours from "../constants/Colours";
 import Styles from "../styles/MainStyle";
+import { View, Image, Text } from 'react-native';
 
 // Import navigators & screens
 import HomeScreen from '../screens/HomeScreen';
@@ -16,17 +17,31 @@ import AddPersonScreen from '../screens/AddPerson';
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
 
+function LogoTitle(titleText) {
+  return (
+    <View style={Styles.headerContainer}>
+      <Image
+        style={Styles.headerLogo}
+        source={require("../assets/images/roi-logo.jpg")}
+      />
+      <Text style={Styles.headerBarTitle}>{titleText}</Text>
+    </View>
+  );
+}
+
 export default function BottomTabNavigator({ navigation, route }) {
 
   return (
     <BottomTab.Navigator
       initialRouteName={INITIAL_ROUTE_NAME}
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
         tabBarActiveTintColor: Colours.tabLabelSelected,
         tabBarInactiveTintColor: Colours.tabLabel,
         tabBarStyle: Styles.navBar,
         tabBarLabelStyle: Styles.navBarLabel,
+        headerStyle: Styles.headerBar,
+        headerTitleStyle: Styles.headerBarTitle,
       }}
     >
       <BottomTab.Screen
@@ -34,6 +49,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={HomeScreen}
         options={{
           title: 'Home',
+          headerShown: false,
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />
         }}
       />
@@ -42,6 +58,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={PeopleNavigator}
         options={{
           title: 'View People',
+          headerShown: false,
           unmountOnBlur: true, // Reset the screen when it loses focus (when someone navigates away from it)
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-people" />
         }}
@@ -50,8 +67,9 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="AddPerson"
         component={AddPersonScreen}
         options={{
-          title: 'Add Staff',
+          headerTitle: () => LogoTitle("Add Staff"),
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-person-add" />,
+          
         }}
       />
       <BottomTab.Screen

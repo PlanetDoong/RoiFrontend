@@ -94,7 +94,7 @@ export default function ViewPersonScreen(props) {
       <ScrollView style={Styles.container} contentContainerStyle={Styles.contentContainer}>
 
           
-        <TextH1 style={{marginTop:0}}>Person: {person.name}</TextH1>
+        <TextH1 style={{marginTop:0}}>{person.name}</TextH1>
         
         <View style={Styles.form}>
 
