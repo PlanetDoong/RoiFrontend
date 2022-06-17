@@ -140,9 +140,9 @@ export default function ViewPeopleScreen(props) {
         />
       </View>
 
-      <ScrollView style={Styles.container} contentContainerStyle={Styles.contentContainer}>
+      <ScrollView style={Styles.container} contentContainerStyle={Styles.personList}>
 
-        <View style={Styles.personList}>
+        <View>
           {displayPeople()}
         </View>
 

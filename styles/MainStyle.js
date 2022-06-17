@@ -243,14 +243,15 @@ export default StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         marginBottom: 10,
-        padding: 20,
+        padding: 10,
         marginHorizontal: 5,
         borderBottomWidth: 1,
         borderBottomColor: Colours.roiCharcoal,
     },
 
     personList: {
-
+        padding: 10,
+        marginTop: -15
     },
 
     personListItem: {
