@@ -162,11 +162,21 @@ export default StyleSheet.create({
     
     headerBar: {
         backgroundColor: Colours.roiLightGrey,
+        borderBottomColor: Colours.roiCharcoal,
+        borderBottomWidth: 1
     },
     headerBarTitle: {
         color: Colours.roiRed,  // COLOUR: primary colour 1
         textAlign: 'left',
-        fontSize: 26
+        fontSize: 26,
+        paddingHorizontal: 10
+    },
+    headerContainer: {
+        flexDirection: "row",
+    },
+    headerLogo: {
+        width: 67,
+        resizeMode: "contain"
     },
 
     // FOOTER NAVIGATION

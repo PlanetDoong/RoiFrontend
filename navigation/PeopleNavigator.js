@@ -8,8 +8,21 @@ import EditPersonScreen from '../screens/EditPersonScreen';
 
 // Import styling and components
 import Styles from "../styles/MainStyle";
+import { View, Image, Text } from 'react-native';
 
 const Stack = createStackNavigator();
+
+function LogoTitle(titleText) {
+  return (
+    <View style={Styles.headerContainer}>
+      <Image
+        style={Styles.headerLogo}
+        source={require("../assets/images/roi-logo.jpg")}
+      />
+      <Text style={Styles.headerBarTitle}>{titleText}</Text>
+    </View>
+  );
+}
 
 export default function PeopleNavigator() {
   return (
@@ -24,15 +37,15 @@ export default function PeopleNavigator() {
       <Stack.Screen
       name="ViewPeople"
       component={ViewPeopleScreen}
-      options={{ title: 'View All People' }} />
+      options={{ headerTitle: () => LogoTitle("View All Staff") }} />
       <Stack.Screen
       name="ViewPerson"
       component={ViewPersonScreen}
-      options={{ title: 'View Person' }} />
+      options={{ headerTitle: () => LogoTitle("View Staff") }} />
       <Stack.Screen
       name="EditPerson"
       component={EditPersonScreen}
-      options={{ title: 'Edit Person' }} />
+      options={{ headerTitle: () => LogoTitle("Edit Staff") }} />
     </Stack.Navigator>
   );
 }

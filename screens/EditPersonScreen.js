@@ -99,7 +99,7 @@ export default function EditPersonScreen(props) {
   }
 
   function showViewPerson() {
-    props.navigation.replace("ViewPerson",{id: id})
+    props.navigation.navigate("ViewPerson",{id: id})
   }
 
   //Edit person
