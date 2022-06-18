@@ -233,9 +233,32 @@ export default StyleSheet.create({
     },
 
 
-    // HELP SCREEN
+    // SETTINGS SCREEN
 
-    
+    settingsButton : {
+        flex: 1,
+        marginHorizontal: 10,
+        paddingHorizontal: 10,
+        textAlignVertical: "center",
+    },  
+
+    settingsButtonContainer : {
+        flexDirection: "row",
+        justifyContent: "center",
+        
+    },
+
+    settingTitle : {
+        borderBottomWidth: 1,
+        borderBottomColor: Colours.roiCharcoal,
+        paddingBottom: 5,
+        marginBottom: 15,
+        marginHorizontal: 5
+    },
+
+    settingContainer : {
+
+    },
     
     // VIEW PEOPLE SCREEN
 

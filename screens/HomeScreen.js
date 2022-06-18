@@ -21,7 +21,7 @@ export default function HomeScreen(props) {
     setIsLogoColour(!isLogoColour)
   }
   
-  function showHelp() {
+  function showSettings() {
     props.navigation.replace('Root', {screen: 'Settings'});
   }
 
@@ -61,10 +61,10 @@ export default function HomeScreen(props) {
             buttonStyle={Styles.homeButton}
           />
           <MyButton
-            text="Add Staff"
+            text="Settings"
             type="minor"    // default*|major|minor
             size="large"      // small|medium*|large
-            onPress={showHelp}
+            onPress={showSettings}
             buttonStyle={Styles.homeButton}
           />
         </View>

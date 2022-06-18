@@ -77,7 +77,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={SettingsScreen}
         options={{
           headerTitle: () => LogoTitle("Settings"),
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-help-circle" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-settings" />,
         }}
       />
     </BottomTab.Navigator>
