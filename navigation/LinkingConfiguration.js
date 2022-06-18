@@ -17,7 +17,7 @@ export default {
             }
           },
           AppPerson: 'people/add',
-          Help: 'help',
+          Settings: 'settings',
         },
       },
       NotFound: '*', // catch-all route (404 resource not found)

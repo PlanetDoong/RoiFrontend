@@ -10,7 +10,7 @@ import { TextParagraph, TextH1, TextH2, TextH3, TextListItem } from "../componen
 import Styles from "../styles/MainStyle";
 import Colours from '../constants/Colours';
 
-export default function HelpScreen(props) {
+export default function SettingsScreen(props) {
 
   return (
     <SafeAreaView style={Styles.safeAreaView}>

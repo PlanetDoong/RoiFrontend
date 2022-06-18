@@ -22,7 +22,7 @@ export default function HomeScreen(props) {
   }
   
   function showHelp() {
-    props.navigation.replace('Root', {screen: 'Help'});
+    props.navigation.replace('Root', {screen: 'Settings'});
   }
 
   function showViewAllStaff() {

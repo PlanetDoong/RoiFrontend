@@ -9,9 +9,9 @@ import { View, Image, Text } from 'react-native';
 
 // Import navigators & screens
 import HomeScreen from '../screens/HomeScreen';
-import HelpScreen from '../screens/HelpScreen';
 import PeopleNavigator from './PeopleNavigator';
 import AddPersonScreen from '../screens/AddPerson';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
 const BottomTab = createBottomTabNavigator();
@@ -73,10 +73,10 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Help"
-        component={HelpScreen}
+        name="Settings"
+        component={SettingsScreen}
         options={{
-          title: 'Help',
+          headerTitle: () => LogoTitle("Settings"),
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-help-circle" />,
         }}
       />
