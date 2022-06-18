@@ -10,7 +10,7 @@ import { View, Image, Text } from 'react-native';
 // Import navigators & screens
 import HomeScreen from '../screens/HomeScreen';
 import PeopleNavigator from './PeopleNavigator';
-import AddPersonScreen from '../screens/AddPerson';
+import AddPersonScreen from '../screens/AddPersonScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 
